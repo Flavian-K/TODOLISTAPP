@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+/* General app styles */
+.app {
+	text-align: center;
+	margin: 20px;
+	font-family: Arial, sans-serif;
+	background-color: #feeafa; /* Light pink background */
+	color: #8e9aaf; /* Dark gray text */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Task item styles */
+.task-item {
+	border: 1px solid #cbc0d3; /* Light gray border */
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #dee2ff; /* Light blue background */
+	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-item:hover {
+	transform: scale(1.02); /* Slight zoom on hover */
+	background-color: #efd3d7; /* Light blush hover background */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Completed task styles */
+.task-item.completed {
+	background-color: #d4edda; /* Subtle green for completed tasks */
+	color: #8e9aaf; /* Keep text dark gray */
+	text-decoration: line-through;
 }
 
-.App-link {
-  color: #61dafb;
+/* Form styles */
+form {
+	margin: 20px 0;
+	background-color: #cbc0d3; /* Light lavender background */
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input,
+form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #8e9aaf; /* Dark gray border */
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+form button {
+	background-color: #8e9aaf; /* Dark gray button */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+form button:hover {
+	background-color: #feeafa; /* Light pink hover */
+	color: #8e9aaf; /* Dark gray text */
+}
+
+/* Button styles */
+button {
+	margin: 5px;
+}
+
+button:hover {
+	transform: scale(1.02);
+	transition: transform 0.2s ease;
+}
+
+/* Header styles */
+h1 {
+	color: #efd3d7; /* Light blush for the header */
+	font-size: 2.5rem;
+	margin-bottom: 20px;
 }
